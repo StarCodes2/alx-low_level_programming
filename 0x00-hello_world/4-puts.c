@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * Prints using the puts() fnction
- * in main
+ * main - Prints using the puts() fnction
+ * return: zero
  */
 
 int main(void)
