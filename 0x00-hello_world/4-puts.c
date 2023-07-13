@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-/* Prints using the puts() fnction */
+/**
+ * Prints using the puts() fnction
+ * in main
+ */
 
 int main(void)
 {
