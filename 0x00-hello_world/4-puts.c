@@ -2,7 +2,7 @@
 
 /**
  * main - Prints using the puts() fnction
- * return: zero
+ * Return: returns zero
  */
 
 int main(void)
