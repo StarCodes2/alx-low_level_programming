@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - using the sizeof function
- * 
+ *
  * Return: zero
  */
 
@@ -21,4 +21,4 @@ int main(void)
 
 
 	return (0);
-}	
+}
