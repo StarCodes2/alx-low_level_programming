@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * print_sign - print + if value is greater than 0, 0 when its equal to 0, and - when its less than 0
+ * print_sign - print + if value is greater than 0,
+ * 0 when its equal to 0, and - when its less than 0
  * @n: value to check
  *
- * Return: returns 1 if value is greater than 0, 0 when its equal to 0, and when its less than 0
+ * Return: returns 1 if value is greater than 0,
+ * 0 when its equal to 0, and when its less than 0
  */
 
 int print_sign(int n)
