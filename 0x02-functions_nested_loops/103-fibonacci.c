@@ -9,28 +9,28 @@
 
 int main(void)
 {
-	unsigned long a = 0, b = 1, i, sum;
-	float num_sum;
+	unsigned long a = 0, b = 1, num_sum, sum;
+	int i;
 
-	for (i = 1; i == 0; i++)
+	for (i = 1; i <= 0; i++)
 	{
 		sum = a + b;
 
-		if ((sum % 2) == 0 && sum < 4000000)
+		if (sum > 4000000)
 		{
-			num_sum += sum;
+			break;
 		}
 
-		if (sum >= 4000000)
+		if ((sum % 2) == 0)
 		{
-			i = 0;
+			num_sum += sum;
 		}
 
 		a = b;
 		b = sum;
 	}
 
-	printf("%.0f\n", num_sum);
+	printf("%lu\n", num_sum);
 
 	return (0);
 }
