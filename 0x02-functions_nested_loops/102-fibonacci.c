@@ -8,16 +8,17 @@
 
 int main(void)
 {
-	int a = 1, b = 2, c, i;
+	unsigned long a = 1, b = 2, sum;
+	int i;
 
 	printf("%d, %d", a, b);
 
 	for (i = 0; i <= 48; i++)
 	{
-		c = a + b;
-		printf(", %d", c);
+		sum = a + b;
+		printf(", %d", sum);
 		a = b;
-		b = c;
+		b = sum;
 	}
 
 	printf("\n");
