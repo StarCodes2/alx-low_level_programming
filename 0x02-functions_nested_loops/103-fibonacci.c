@@ -9,10 +9,9 @@
 
 int main(void)
 {
-	unsigned long a = 0, b = 1, num_sum, sum;
-	int i;
+	unsigned long a = 0, b = 1, num_sum = 0, sum;
 
-	for (i = 1; i <= 0; i++)
+	while (1)
 	{
 		sum = a + b;
 
