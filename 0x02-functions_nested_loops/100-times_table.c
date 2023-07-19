@@ -10,13 +10,13 @@ void print_times_table(int n)
 {
 	int a, b, c, mul;
 
-	if (n <= 15 && n > 0)
+	if (n > 0 && n < 16)
 	{
-		for (a = 0; a < n; a++)
+		for (a = 0; a <= n; a++)
 		{
 			_putchar('0');
 
-			for (b = 1; b < n; b++)
+			for (b = 1; b <= n; b++)
 			{
 				mul = a * b;
 
