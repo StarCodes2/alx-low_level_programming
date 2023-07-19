@@ -39,7 +39,7 @@ void print_times_table(int n)
 				{
 					c = mul / 10;
 					_putchar((c / 10) + '0');
-					_purchar((c % 10) + '0');
+					_putchar((c % 10) + '0');
 					_putchar((mul % 10) + '0');
 				}
 			}
