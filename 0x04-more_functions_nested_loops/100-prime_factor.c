@@ -32,7 +32,7 @@ int main(void)
 {
 	long div, num = 612852475143, high_prime = 0;
 
-	for (div = 2; div <= (num / 2); div += 2)
+	for (div = 2; div < (num / 2); div += 2)
 	{
 		if (div == 4)
 		{
