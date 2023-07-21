@@ -18,19 +18,23 @@ void print_number(int n)
 
 	if (n > 9)
 	{
-		h = n / 10;
-
 		if (n > 99)
 		{
-			t = h / 10;
+			h = n / 10;
 
 			if (n > 999)
 			{
-				_putchar((t / 10) + '0');
-			}
+				t = h / 10;
 
-			_putchar((t % 10) + '0');
-			_putchar((h % 10) + '0');
+				_putchar((t / 10) + '0');
+				_putchar((t % 10) + '0');
+				_putchar((h % 10) + '0');
+			}
+			else
+			{
+				_putchar((h / 10) + '0');
+				_putchar((h % 10) + '0');
+			}
 		}
 		else
 		{
