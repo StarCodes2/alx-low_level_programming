@@ -11,22 +11,31 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		n *= -1;
+		n = -n;
+
 		_putchar('-');
 	}
 
-	if (n > 99)
+	if (n > 9)
 	{
 		h = n / 10;
 
-		if (n > 999)
+		if (n > 99)
 		{
 			t = h / 10;
-			_putchar((t / 10) + '0');
-			_putchar((t % 10) + '0');
-		}
 
-		_putchar((h % 10) + '0');
+			if (n > 999)
+			{
+				_putchar((t / 10) + '0');
+			}
+
+			_putchar((t % 10) + '0');
+			_putchar((h % 10) + '0');
+		}
+		else
+		{
+			_putchar((n / 10) + '0');
+		}
 	}
 
 	_putchar((n % 10) + '0');
