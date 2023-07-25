@@ -16,11 +16,11 @@ void rev_string(char *s)
 
 	count = i - 1;
 	i = 0;
-	char s2[count];
+	char s2;
 
 	while (i <= count)
 	{
-		s2[i] = s[i];
+		*(s2 + i) = *(s + i);
 		i++;
 	}
 
@@ -28,7 +28,7 @@ void rev_string(char *s)
 
 	for (count = count; count >= 0; count--)
 	{
-		*(s + i) = s2[count];
+		*(s + i) = *(s2 + count);
 		i++;
 	}
 }
