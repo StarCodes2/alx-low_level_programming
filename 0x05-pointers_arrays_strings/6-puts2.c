@@ -11,7 +11,7 @@ void puts2(char *str)
 
 	for (i = 0; str[i] != '\0'; i += 2)
 	{
-		if (str[i - 1] == '\' && str[i] == '0')
+		if (str[i - 1] == "\\" && str[i] == '0')
 		{
 			break;
 		}
