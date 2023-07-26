@@ -21,7 +21,7 @@ void puts_half(char *str)
 
 	for (index = 0; index < half_len; index++)
 	{
-		_putchar(str[imdex]);
+		_putchar(str[index]);
 	}
 
 	_putchar('\0');
