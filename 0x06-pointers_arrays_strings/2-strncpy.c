@@ -1,4 +1,4 @@
-#inclide "main.h"
+#include "main.h"
 
 /**
  * _strncpy - copy n characters of the string pointed to by src to dest
