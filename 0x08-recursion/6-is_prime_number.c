@@ -18,11 +18,8 @@ int prime_checker(int n, int div)
 		else
 			return (0 + prime_checker(n, div + 1));
 	}
-	else if (n == div)
-	{
-		return (1);
-	}
 
+	return (1);
 }
 
 /**
