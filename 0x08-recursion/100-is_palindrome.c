@@ -29,9 +29,9 @@ int str_len(char *s)
 
 int check_string(char *s, int start, int half, int len)
 {
-	if (*s == s[len] && start <= half)
-		return (check_string(s + 1, start + 1, half, len - 1));
-	else if (*s != s[len] && start <= half)
+	if (*(s + start) == *(s + len) && start <= half)
+		return (check_string(s, start + 1, half, len - 1));
+	else if (*(s + start) != *(s + len) && start <= half)
 		return (0);
 
 	return (1);
@@ -50,7 +50,7 @@ int is_palindrome(char *s)
 
 	if (*s == '\0')
 		return (1);
-	else if (s[1] == '\0')
+	else if (*(s + 1) == '\0')
 		return (1);
 
 	len = str_len(s);
