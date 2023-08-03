@@ -10,7 +10,7 @@
  * the integer or -1 if no such value is found
  */
 
-int _sqrt(int n, sqr)
+int _sqrt(int n, int sqr)
 {
 	int sqr2 = sqr;
 
