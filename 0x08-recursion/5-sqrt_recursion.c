@@ -18,10 +18,11 @@ int _sqrt(int n, int sqr)
 
 	if (sqr2 == n)
 		return (sqr);
-	else if (sqr == n / 2)
+
+	if (sqr == n / 2)
 		return (-1);
 
-	return (_sqrt(n, sqr++));
+	return (_sqrt(n, sqr + 1));
 }
 
 /**
