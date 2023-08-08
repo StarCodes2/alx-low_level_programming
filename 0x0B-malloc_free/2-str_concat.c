@@ -15,6 +15,12 @@ char *str_concat(char *s1, char *s2)
 	unsigned int j, i = 0, size = 0;
 	char *s3;
 
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
 	while (s1[i])
 	{
 		size++;
@@ -35,19 +41,14 @@ char *str_concat(char *s1, char *s2)
 	if (s3 == NULL)
 		return (NULL);
 
-	if (s1 != NULL)
-	{
-		for (i = 0; s1[i]; i++)
-			s3[i] = s1[i];
-	}
+	for (i = 0; s1[i]; i++)
+		s3[i] = s1[i];
 
-	if (s2 != NULL)
+
+	for (j = 0; s2[j]; j++)
 	{
-		for (j = 0; s2[j]; j++)
-		{
-			s3[i] = s2[j];
-			i++;
-		}
+		s3[i] = s2[j];
+		i++;
 	}
 	s3[i] = '\0';
 
