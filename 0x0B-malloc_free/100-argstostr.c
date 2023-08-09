@@ -36,7 +36,7 @@ char *argstostr(int ac, char **av)
 			ptr[index] = av[i][j];
 			index++;
 		}
-		ptr[index] = '\n';
+		ptr[index++] = '\n';
 	}
 
 	return (ptr);
