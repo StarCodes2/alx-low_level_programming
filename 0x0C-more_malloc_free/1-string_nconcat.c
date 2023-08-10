@@ -38,5 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (index2 = 0; s2[index2] && index2 < n; index2++)
 		s3[index++] = s2[index2];
 
+	s3[index] = '\0';
+
 	return (s3);
 }
