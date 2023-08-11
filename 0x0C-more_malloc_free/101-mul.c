@@ -60,17 +60,23 @@ char *create_space(int size)
 	int i;
 
 	if (size <= 0)
-		return (NULL);
+	{
+		_prints("Error");
+		exit(98);
+	}
 
 	arr = malloc(sizeof(char) * size);
 
 	if (arr == NULL)
-		return (NULL);
+	{
+		_prints("Error");
+		exit(98);
+	}
 
 	for (i = 0; i < (size - 1); i++)
 		arr[i] = 'x';
 
-	arr[++i] = '\0';
+	arr[i] = '\0';
 
 	return (arr);
 }
