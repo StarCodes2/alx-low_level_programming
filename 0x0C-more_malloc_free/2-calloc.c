@@ -12,23 +12,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i, m_size;
+	unsigned int i;
 	void *arr;
 	char c;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	m_size = nmemb * size;
-
-	arr = malloc(m_size);
+	arr = malloc(nmemb * size);
 
 	if (arr == NULL)
 		return (NULL);
 
 	c = arr;
 
-	for (i = 0; i < m_size; i++)
+	for (i = 0; i < (nmemb * size); i++)
 	{
 		arr[i] = '\0';
 	}
