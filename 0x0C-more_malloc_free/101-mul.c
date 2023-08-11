@@ -164,8 +164,21 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	s1 = cut_zeros(argv[1]);
-	s2 = cut_zeros(argv[2]);
+	if (*(argv[1]) == '0')
+		argv[1] = cut_zeros(argv[1]);
+
+	if (*(argv[2]) == '0')
+		argv[2] = cut_zeros(argv[2]);
+
+	if (*(argv[1]) == '\0' || *(argv[2]) == '\0')
+	{
+		_putchar('0');
+		_putchar('\n');
+		return (0);
+	}
+
+	s1 = argv[1];
+	s2 = argv[2];
 	len1 = len(s1);
 	len2 = len(s2);
 
