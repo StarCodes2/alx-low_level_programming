@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - prints the name of the current file
@@ -8,13 +8,7 @@
 
 int main(void)
 {
-	int i;
-	char ptr = __FILE__;
-	
-	for (i = 0; ptr[i]; i++)
-		_putchar(ptr[i]);
-
-	_putchar('\n');
+	printf("%s\n", __FILE__);
 
 	return (0);
 }
