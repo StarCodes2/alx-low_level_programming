@@ -12,7 +12,7 @@ int _len(char *c)
 {
 	int len = 0, i = 0;
 
-	while(c[i++])
+	while (c[i++])
 		len++;
 
 	return (len);
@@ -40,7 +40,7 @@ char *_cpystr(char *dest, char *s)
 
 /**
  * new_dog - creates a new struct of type dog_t
- * @nmae: points to the dog name
+ * @name: points to the dog name
  * @age: contains the age of the dog
  * @owner: points to the owner string
  *
