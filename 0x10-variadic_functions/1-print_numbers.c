@@ -1,6 +1,4 @@
 #include "variadic_functions.h"
-#include <stdio.h>
-#include <stdarg.h>
 
 /**
  * print_numbers - print the integer arguments
@@ -10,20 +8,19 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list p;
+	va_list m;
 	unsigned int index;
 
-	va_start(p, n);
+	va_start(m, n);
 
 	for (index = 0; index < n; index++)
 	{
-		printf("%d", va_arg(p, int));
+		printf("%d", va_arg(m, int));
 
-		if (index < (n - 1) && separator != NULL)
+		if (index != (n - 1) && separator != NULL)
 			printf("%s", separaror);
 	}
-
-	va_end(p);
+	va_end(m);
 
 	printf("\n");
 }
