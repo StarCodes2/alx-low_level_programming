@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 	i = 0;
 
-	while(i < byte)
+	while (i < byte)
 	{
 		opcode = *(unsigned char *)(addr + i);
 		printf("%s", s);
