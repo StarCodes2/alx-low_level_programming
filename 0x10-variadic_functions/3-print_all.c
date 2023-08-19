@@ -62,6 +62,7 @@ void print_all(const char * const format, ...)
 		{'f', p_float},
 		{'s', p_string}
 	};
+	char *s = "";
 
 	va_start(list, format);
 	i = 0;
@@ -70,18 +71,16 @@ void print_all(const char * const format, ...)
 	{
 		j = 0;
 
-		while (j < 4 && (*(format + i)))
-		{
-			if ((*(format + i)) == p[j].sym)
-			{
-				p[j].p(list);
-
-				if ((*(format + (i + 1))) != '\0')
-					printf(", ");
-				break;
-			}
+		while (j < 4 && (*(format + i) != p[j].sym))
 			j++;
+
+		if (j < 4)
+		{
+			printf("%s", s);
+			p[j].p(list);
+			s = ", ";
 		}
+
 		i++;
 	}
 	va_end(list);
