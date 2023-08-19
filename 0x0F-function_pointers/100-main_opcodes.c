@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
 	while(i < byte)
 	{
-		opcode = (unsigned char *)(addr + i);
+		opcode = *(unsigned char *)(addr + i);
 		printf("%s", s);
 		printf("%.2x", opcode);
 		s = " ";
