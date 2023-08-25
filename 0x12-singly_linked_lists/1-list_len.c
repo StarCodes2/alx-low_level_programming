@@ -3,6 +3,8 @@
 /**
  * list_len - counts the numbers iof elements in a list
  * @h: points to a node in a list
+ *
+ * Return: returns the number of nodes in a list
  */
 
 size_t list_len(const list_t *h)
