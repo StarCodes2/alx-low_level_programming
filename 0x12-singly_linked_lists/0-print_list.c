@@ -13,11 +13,24 @@ size_t print_list(const list_t *h)
 
 	if (h)
 	{
-		_putchar('[');
-		print_num(h->len);
-		_putchar(']');
-		_putchar(' ');
-		print_str(h->str);
+		if (h->str)
+		{
+			_putchar('[');
+			print_num(h->len);
+			_putchar(']');
+			_putchar(' ');
+			print_str(h->str);
+			_putchar('\n');
+		}
+		else
+		{
+			_putchar('[');
+			print_num(0);
+			_putchar(']');
+			_putchar(' ');
+			print_str("(nil)");
+			_putchar('\n');
+		}
 
 		if (h->next)
 			len = print_list(h->next);
