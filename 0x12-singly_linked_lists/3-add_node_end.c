@@ -63,7 +63,7 @@ size_t len(char *s)
 
 list_t get_last_node(list_t *h)
 {
-	list_t nodes;
+	list_t *nodes;
 
 	if (h->next)
 		node = get_last_node(h->next);
