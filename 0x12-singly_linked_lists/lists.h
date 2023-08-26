@@ -29,6 +29,6 @@ list_t *add_node_end(list_t **head, const char *str);
 void print_str(char *s);
 void print_num(unsigned int len);
 size_t len(char *s);
-list_t get_last_node(list_t *h);
+list_t *get_last_node(list_t *h);
 
 #endif

@@ -61,7 +61,7 @@ size_t len(char *s)
  * Return: returns the address of the last node
  */
 
-list_t get_last_node(list_t *h)
+list_t *get_last_node(list_t *h)
 {
 	list_t *node;
 
