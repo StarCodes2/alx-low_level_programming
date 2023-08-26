@@ -30,8 +30,15 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = len(s);
 	new->next = NULL;
 
-	last = get_last_node(*head);
-	last->next = new;
+	if (*head == NULL)
+	{
+		*head = new;
+	}
+	else
+	{
+		last = get_last_node(*head);
+		last->next = new;
+	}
 
 	return (*head);
 }
