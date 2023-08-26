@@ -19,6 +19,5 @@ void free_list(list_t *head)
 		head = temp;
 	}
 
-	if (head != NULL)
-		free(head);
+	free(head);
 }
