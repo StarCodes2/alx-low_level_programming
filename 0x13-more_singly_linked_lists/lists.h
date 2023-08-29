@@ -25,6 +25,6 @@ listint_t *add_nodeint(listint_t **head, const int n);
 listint_t *add_nodeint_end(listint_t **head, const int n);
 
 /* Helper functions */
-listint_t *get_last_node(const listint_t *head);
+listint_t *get_last_node(listint_t *head);
 
 #endif
