@@ -11,38 +11,18 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i, len;
-	listint_t *h = head;
+	listint_t *h = NULL;
 
 	if (head == NULL)
 		return (NULL);
 
-	len = get_len(h);
-	if (index >= len)
-		return (NULL);
-
-	for (i = 1; i <= index; i++)
+	for (i = 0; head->next; i++)
 	{
-		h = h->next;
 		if (i == index)
-			break;
+			return (head);
+
+		head = head->next;
 	}
 
-	return (h);
-}
-
-/**
- * get_len - get the number of nodes in a list
- * @head: points to the first node in a list
- *
- * Return: returns the number of nodes in the list
- */
-
-size_t get_len(listint_t *head)
-{
-	size_t len;
-
-	if (head->next)
-		len = get_len(head->next);
-
-	return (len + 1);
+	return (NULL);
 }
