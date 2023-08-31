@@ -7,7 +7,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int copy = n;
+	unsigned long int copy = n;
 
 	copy >> 1;
 	if (copy)
