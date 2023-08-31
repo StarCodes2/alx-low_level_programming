@@ -7,9 +7,9 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int copy = n;
+	unsigned long int copy;
 
-	copy >> 1;
+	copy = n >> 1;
 	if (copy)
 		print_binary(copy);
 
