@@ -32,9 +32,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (wlen == -1 || rlen != wlen)
 	{
 		free(buffer);
+		close(fd);
 		return (0);
 	}
 	free(buufer);
+	close(fd);
 
 	return (wlen);
 }
