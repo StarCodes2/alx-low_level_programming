@@ -21,10 +21,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
-	rlen = read(fd, buffer, letters);
-	if (fd == -1 || rlen == -1)
+	if (fd == -1)
 	{
 		free(buffer);
+		return (0);
+	}
+
+	rlen = read(fd, buffer, letters);
+	if (rlen == -1)
+	{
+		free(buffer);
+		close(fd);
 		return (0);
 	}
 
@@ -35,7 +42,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	free(buufer);
+	free(buffer);
 	close(fd);
 
 	return (wlen);
