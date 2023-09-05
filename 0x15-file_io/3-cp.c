@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	cl_file(to);
 	cl_file(from);
 	free(buf);
-	return (1);
+	return (0);
 }
 
 /**
