@@ -19,13 +19,13 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
+	buf = c_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	if (from == -1)
 		read_err(argv[1], 0, 0);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (to == -1)
 		write_err(argv[2], 0, from);
-	buf = c_buffer(argv[2]);
 
 	while (rd)
 	{
