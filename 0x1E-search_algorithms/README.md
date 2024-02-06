@@ -7,4 +7,5 @@
 - **3-O:** Contains the space complexity (worst case) of an iterative linear search algorithm in an array of size n
 - **4-O:** Contains the time complexity (worst case) of a binary search in an array of size n
 - **5-O:** Contains the space complexity (worst case) of a binary search in an array of size n
+- **6-O:** Contains the space complexity of a given function/algorithm
 
