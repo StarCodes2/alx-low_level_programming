@@ -9,4 +9,4 @@
 - **5-O:** Contains the space complexity (worst case) of a binary search in an array of size n
 - **6-O:** Contains the space complexity of a given function/algorithm
 - **100-jump.c:** Contains a function that searches for a value in a sorted array of integers using the Jump search algorithm, and the function's helper function
-
+- **101-0:** Contains the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)
