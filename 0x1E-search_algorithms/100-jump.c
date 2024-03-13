@@ -29,25 +29,32 @@ size_t min(size_t a, size_t b)
 
 int jump_search(int *array, size_t size, int value)
 {
-	size_t step = sqrt(size), prev = 0;
+	size_t step = sqrt(size), prev = 0, checked;
 
-	while (array[min(step, size) - 1] < value)
+	printf("Value checked array[0] = [%d]\n", array[0]);
+	while (array[min(step, size)] < value)
 	{
+		checked = min(step, size);
+		printf("Value checked array[%ld] = [%d]\n", checked, array[checked]);
 		prev = step;
 		step += sqrt(size);
 		if (step >= size)
-			return (-1);
+			break;
 	}
+
+	printf("Value found between index [%ld] and [%ld]\n", prev, step);
 
 	while (array[prev] < value)
 	{
+		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
 		prev++;
-		if (prev == min(step, size))
+		if (prev > step || prev >= size)
 			return (-1);
 	}
+	printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
 
 	if (array[prev] == value)
 		return (prev);
-	
+
 	return (-1);
 }
